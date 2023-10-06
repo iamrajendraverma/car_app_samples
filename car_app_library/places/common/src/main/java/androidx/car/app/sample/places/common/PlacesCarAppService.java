@@ -26,7 +26,6 @@ import androidx.car.app.CarAppService;
 import androidx.car.app.Screen;
 import androidx.car.app.ScreenManager;
 import androidx.car.app.Session;
-import androidx.car.app.SessionInfo;
 import androidx.car.app.validation.HostValidator;
 
 /**
@@ -39,7 +38,7 @@ import androidx.car.app.validation.HostValidator;
 public class PlacesCarAppService extends CarAppService {
     @Override
     @NonNull
-    public Session onCreateSession(@NonNull SessionInfo sessionInfo) {
+    public Session onCreateSession() {
         return new Session() {
             @Override
             @NonNull
@@ -69,4 +68,6 @@ public class PlacesCarAppService extends CarAppService {
                     .build();
         }
     }
+
+
 }
